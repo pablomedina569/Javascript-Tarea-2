@@ -1,13 +1,4 @@
-# Javascript-Tarea-2
-
-# Tarea2_EjercicioIntegrador
-   ## 1) Arreglar errores existentes en el código
-       a. Al ejecutar agregarProducto 2 veces con los mismos valores debería agregar 1 solo producto con la suma de las cantidades.    
-       b. Al ejecutar agregarProducto debería actualizar la lista de categorías solamente si la categoría no estaba en la lista.
-       c. Si intento agregar un producto que no existe debería mostrar un mensaje de error.
-       
- ```javascript
-    // Cada producto que vende el super es creado con esta clase
+// Cada producto que vende el super es creado con esta clase
 class Producto {
     constructor(sku, nombre, precio, categoria, stock) {
       this.sku = sku;
@@ -68,17 +59,7 @@ class Producto {
         resolve();
       });
     }
-```
-   ## 2) Agregar la función eliminarProducto a la clase Carrito
-       a. La función eliminarProducto recibe un sku y una cantidad (debe devolver una promesa)
-    
-       b. Si la cantidad es menor a la cantidad de ese producto en el carrito, se debe restar esa cantidad al producto
-       c. Si la cantidad es mayor o igual a la cantidad de ese producto en el carrito, se debe eliminar el producto del carrito
-       d. Si el producto no existe en el carrito, se debe mostrar un mensaje de error
-       e. La función debe retornar una promesa
-   
-```javascript
-     /**
+  /**
    * Función que elimina @{cantidad} de productos con @{sku} del carrito
    */
     eliminarProducto(sku, cantidad) {
@@ -113,12 +94,8 @@ class Producto {
    console.log(lavandina.stock); // Resultado: 10
    console.log(shampoo.stock); // Resultado: 50
    console.log(jabon.stock); // Resultado: 3
-```       
-   ​
-## 3) Utilizar la función eliminarProducto utilizando .then() y .catch()
-
-```javascript
-//Uso y prueba de carrito utilizando .then y .catch
+  
+  //Uso y prueba de carrito utilizando .then y .catch
   const carrito = new Carrito();
   carrito.agregarProducto('WE328NJ', 1)
     .then(() => {
@@ -147,4 +124,4 @@ class Producto {
       .catch((error) => {
         console.log('Error:', error);
       });
-```
+   
